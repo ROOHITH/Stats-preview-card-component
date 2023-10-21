@@ -1,0 +1,124 @@
+/* Define CSS variables for colors */
+:root {
+  --main-background: hsl(233, 47%, 7%);
+  --card-background: hsl(244, 38%, 16%);
+  --accent: hsl(277, 64%, 61%);
+  --main-heading: hsl(0, 0%, 100%);
+  --main-paragraph: hsla(0, 0%, 100%, 0.75);
+  --stat-headings: hsla(0, 0%, 100%, 0.6);
+}
+/* Import the Inter font */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/* Import the Lexend Deca font */
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400&display=swap");
+
+/* Apply the fonts to elements */
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+}
+
+/* For elements that should use Lexend Deca */
+h1,
+h2,
+h3 {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+/* Typography */
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  background-color: #0a0c1b !important;
+}
+
+/* Use the appropriate class names in your HTML to apply the styles */
+.centered-div {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 300px;
+}
+.box1 {
+  background-color: var(--card-background);
+  padding: 40px;
+}
+.main-head {
+  color: var(--main-heading);
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 20px;
+}
+.highlight {
+  color: var(--accent);
+}
+.para {
+  color: var(--main-paragraph);
+  font-size: 11px;
+}
+.num-text {
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+.normal-text {
+  color: var(--main-paragraph);
+  text-transform: uppercase;
+  font-size: 10px;
+}
+.box2 {
+  position: relative;
+}
+
+.box2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+      0deg,
+      hsla(277, 64%, 61%, 0.7),
+      hsla(277, 64%, 61%, 0.7)
+    ),
+    url("./images/image-header-desktop.jpg");
+  background-size: cover;
+  background-blend-mode: color;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  
+}
+@media (max-width: 767px) {
+  /* Your CSS rules for mobile devices or small screens */
+  .text-head{
+    text-align: center;
+  }
+  .para{
+    text-align: center;
+    font-size: 14px;
+  }
+  .centered-div{
+    margin-top: 130px;
+  }
+  .centered-div img,.centered-div,.centered-div col{
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .flexcol{
+    flex-direction: column;
+    gap: 25px;
+  }
+
+}
